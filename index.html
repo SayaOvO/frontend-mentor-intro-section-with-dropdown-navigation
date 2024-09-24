@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <span class="header__logo">snap</span>
+        <nav class="header__nav">
+          <button type="menu" class="toggle-menu open-drawer">
+            <img src="images/icon-menu.svg" alt="menu icon" />
+          </button>
+
+          <ul class="header__menu">
+            <li
+              class="header__menu-item header__dropdown dropdown-toggle"
+              tabindex="0"
+            >
+              Features
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="arrow down icon"
+                class="arrow-down"
+              />
+              <img
+                src="images/icon-arrow-up.svg"
+                alt="arrow up icon"
+                class="arrow-up"
+              />
+              <ul class="header__dropdown-content dropdown-content">
+                <li class="header__dropdown-item" tabindex="0">
+                  <img src="images/icon-todo.svg" alt="todo icon" />
+                  Todo List
+                </li>
+                <li class="header__dropdown-item" tabindex="0">
+                  <img src="images/icon-calendar.svg" alt="calendar icon" />
+                  Calendar
+                </li>
+                <li class="header__dropdown-item" tabindex="0">
+                  <img src="images/icon-reminders.svg" alt="Reminders icon" />
+                  Reminders
+                </li>
+                <li class="header__dropdown-item" tabindex="0">
+                  <img src="images/icon-planning.svg" alt="Planning icon" />
+                  Planning
+                </li>
+              </ul>
+            </li>
+            <li
+              class="header__menu-item header__dropdown dropdown-toggle"
+              tabindex="0"
+            >
+              Company
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="arrow down icon"
+                class="arrow-down"
+              />
+              <img
+                src="images/icon-arrow-up.svg"
+                alt="arrow up icon"
+                class="arrow-up"
+              />
+
+              <ul class="header__dropdown-content left dropdown-content">
+                <li class="header__dropdown-item" tabindex="0">History</li>
+                <li class="header__dropdown-item" tabindex="0">Our Team</li>
+                <li class="header__dropdown-item" tabindex="0">Blog</li>
+              </ul>
+            </li>
+            <li class="header__menu-item">Careers</li>
+            <li class="header__menu-item">About</li>
+          </ul>
+        </nav>
+        <div class="auth-btns header__auth-btns">
+          <button class="header__auth-login" tabindex="0">Login</button>
+          <button class="auth-register" tabindex="0">Register</button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__title">Make remote work</h1>
+            <p class="hero__description">
+              Get your team in sync, no matter your location. Streamline
+              processes, create team rituals, and watch productivity soar.
+            </p>
+            <button class="hero__cta">Learn more</button>
+            <footer class="hero__clients">
+              <div class="hero__client-logo">
+                <img src="images/client-databiz.svg" alt="databiz" />
+              </div>
+              <div class="hero__client-logo">
+                <img src="images/client-audiophile.svg" alt="Audiophile" />
+              </div>
+              <div class="hero__client-logo">
+                <img
+                  src="images/client-meet.svg"
+                  alt="Meet"
+                  class="hero__client-logo"
+                />
+              </div>
+              <div class="hero__client-logo">
+                <img
+                  src="images/client-maker.svg"
+                  alt="Maker"
+                  class="hero__client-logo"
+                />
+              </div>
+            </footer>
+          </div>
+          <div class="hero__image">
+            <picture>
+              <source
+                srcset="images/image-hero-desktop.png"
+                media="(min-width: 769px)"
+                class="hero__image-desktop"
+              />
+              <source
+                srcset="images/image-hero-mobile.png"
+                media="(max-width: 768px)"
+                class="hero__image-mobile"
+              />
+              <img
+                src="images/image-hero-desktop.png"
+                alt="hero image"
+                class="hero__image_main"
+              />
+            </picture>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="drawer-overlay">
+      <nav class="drawer">
+        <button type="menu" class="toggle-menu close-drawer" tabindex="0">
+          <img
+            src="images/icon-close-menu.svg"
+            alt="close menu icon"
+            class="drawer__close-menu"
+          />
+        </button>
+        <ul class="drawer__menu">
+          <li class="drawer__menu-item drawer__dropdown">
+            <div class="drawer__dropdown-toggle dropdown-toggle">
+              Features
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="arrow down icon"
+                class="arrow-down"
+              />
+              <img
+                src="images/icon-arrow-up.svg"
+                alt="arrow up icon"
+                class="arrow-up"
+              />
+            </div>
+            <ul class="drawer__dropdown-content dropdown-content">
+              <li class="drawer__dropdown-item" tabindex="0">
+                <img
+                  src="images/icon-todo.svg"
+                  alt="todo icon"
+                  class="drawer__dropdown-icon"
+                />
+                Todo List
+              </li>
+              <li class="drawer__dropdown-item" tabindex="0">
+                <img
+                  src="images/icon-calendar.svg"
+                  alt="calendar icon"
+                  class="drawer__dropdown-icon"
+                />
+                Calendar
+              </li>
+              <li class="drawer__dropdown-item" tabindex="0">
+                <img
+                  src="images/icon-reminders.svg"
+                  alt="Reminders icon"
+                  class="drawer__dropdown-icon"
+                />
+                Reminders
+              </li>
+              <li class="drawer__dropdown-item" tabindex="0">
+                <img
+                  src="images/icon-planning.svg"
+                  alt="Planning icon"
+                  class="drawer__dropdown-icon"
+                />
+                Planning
+              </li>
+            </ul>
+          </li>
+          <li class="drawer__menu-item drawer__dropdown dropdown">
+            <div class="dropdown-toggle">
+              Company
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="arrow down icon"
+                class="arrow-down"
+              />
+              <img
+                src="images/icon-arrow-up.svg"
+                alt="arrow up icon"
+                class="arrow-up"
+              />
+            </div>
+            <ul class="drawer__dropdown-content dropdown-content">
+              <li class="drawer__dropdown-item" tabindex="0">History</li>
+              <li class="drawer__dropdown-item" tabindex="0">Our Team</li>
+              <li class="drawer__dropdown-item" tabindex="0">Blog</li>
+            </ul>
+          </li>
+          <li class="drawer__menu-item">Careers</li>
+          <li class="drawer__menu-item">About</li>
+        </ul>
+        <div class="auth-btns drawer__auth-btns">
+          <button>Login</button>
+          <button class="auth-register">Register</button>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
